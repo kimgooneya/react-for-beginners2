@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 function App() {
   const [counter, setValue] = React.useState(0);
   const [keyword, setKeyword] = React.useState("");
-  
+  const testvalue = 1;
   const onClick = () => setValue((prev) => prev +1);
   const onChange = (event) => setKeyword(event.target.value);
   
