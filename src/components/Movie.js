@@ -5,13 +5,13 @@ function Movie({id, coverImg, title, summary, genres}) {
     return (
     <div>
         <img src={coverImg} alt={title}/>
-        <h2>
+        <h2 className="">
             <Link to={`/movie/${id}`}>
                 {title}
             </Link>    
         </h2>
         <p>
-            {summary}
+            {summary.length > 235 ? `${summary.slice(0,235)}...` : summary}
         </p>
         <ul>
             {genres.map(g => <li key={g}>{g}</li>)}
